@@ -5,12 +5,19 @@
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
     android:paddingTop="16dp"
-    android:paddingBottom="16dp">
+    android:paddingBottom="16dp"
+    android:background="@android:color/holo_orange_light"
+    android:gravity="top|center"
+    android:orientation="vertical" >
+
+    <!-- gravity helps relate to other fragment -->
 
     <TextView
-        android:text="Landscape Fragment"
-        android:layout_width="match_parent"
+        android:text="Side Panel"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
         android:textSize="30dp"/>
 
 </LinearLayout>

@@ -1,16 +1,44 @@
 package edu.slcc.jasonshepherd.myFragments;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(edu.slcc.jasonshepherd.myFragments.R.layout.activity_main);
+
+        setContentView(R.layout.activity_main);
+
+        // Create fragment manager. Allows interaction with fragment in an activity.
+        FragmentManager fragmentManager = getFragmentManager();
+
+        // Create fragment transaction. Allows us to call methods to manage fragments... show, etc.
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        // Set to change fragments on orientation - first get configuration information
+        Configuration configuration = getResources().getConfiguration();
+
+        if(configuration.orientation == Configuration.ORIENTATION_PORTRAIT) {
+            hideSidePanel();
+        }
+
+        fragmentTransaction.commit();
+
+    }
+
+    private void hideSidePanel() {
+        View sidePane = findViewById(R.id.side_panel);
+        if (sidePane.getVisibility() == View.VISIBLE) {
+            sidePane.setVisibility(View.GONE);
+        }
     }
 
     @Override

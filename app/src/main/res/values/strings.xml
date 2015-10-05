@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Splash</string>
 
-    <string name="hello_main">Hello Main Activity!</string>
+    <string name="hello_main">My Fragments</string>
     <string name="action_settings">Settings</string>
+
 </resources>
