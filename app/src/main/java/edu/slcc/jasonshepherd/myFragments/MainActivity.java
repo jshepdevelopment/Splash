@@ -26,14 +26,17 @@ public class MainActivity extends AppCompatActivity {
         // Set to change fragments on orientation - first get configuration information
         Configuration configuration = getResources().getConfiguration();
 
+        // Check configuration orientation, and hide panel if in portrait orientation
         if(configuration.orientation == Configuration.ORIENTATION_PORTRAIT) {
             hideSidePanel();
         }
 
+        // Used to invoke Fragment changes on Activity
         fragmentTransaction.commit();
 
     }
 
+    // Hide the side panel if it is visible
     private void hideSidePanel() {
         View sidePane = findViewById(R.id.side_panel);
         if (sidePane.getVisibility() == View.VISIBLE) {

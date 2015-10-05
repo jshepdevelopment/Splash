@@ -38,6 +38,7 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     public void nextActivity() {
+
         // Start next activity
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
@@ -52,6 +53,7 @@ public class SplashActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
