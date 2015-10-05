@@ -17,8 +17,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/progressBar"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="#a9cd47"
         android:layout_alignBottom="@+id/imageView"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="56dp" />
+        android:layout_marginBottom="56dp"
+        android:indeterminate="false" />
 
 </RelativeLayout>

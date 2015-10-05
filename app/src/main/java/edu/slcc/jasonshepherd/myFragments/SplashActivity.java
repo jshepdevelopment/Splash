@@ -1,4 +1,4 @@
-package edu.slcc.jasonshepherd.splash;
+package edu.slcc.jasonshepherd.myFragments;
 
 import android.content.Intent;
 import android.os.Handler;
@@ -6,12 +6,24 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.WindowManager;
 
 public class SplashActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Use getWindow() to set the layout parameters to fullscreen
+        // This will effectively hide the system's status bar
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+        // getSupportActionBar() is used to get a reference to the activity's action bar
+        // adding the .hide() to hide the activities action bar
+        getSupportActionBar().hide();
+
+        // important to set content view after the above methods, to avoid crash
         setContentView(R.layout.activity_splash);
 
         // New thread
@@ -34,7 +46,7 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        //getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 

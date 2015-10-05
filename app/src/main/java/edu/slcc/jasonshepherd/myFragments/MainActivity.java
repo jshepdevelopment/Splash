@@ -1,4 +1,4 @@
-package edu.slcc.jasonshepherd.splash;
+package edu.slcc.jasonshepherd.myFragments;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -10,13 +10,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(edu.slcc.jasonshepherd.myFragments.R.layout.activity_main);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(edu.slcc.jasonshepherd.myFragments.R.menu.menu_main, menu);
         return true;
     }
 
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == edu.slcc.jasonshepherd.myFragments.R.id.action_settings) {
             return true;
         }
 
